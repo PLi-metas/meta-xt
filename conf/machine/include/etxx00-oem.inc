@@ -1,0 +1,61 @@
+# We know about rtc
+include conf/machine/include/build-extras.inc
+
+SOC_FAMILY = "bcm7252s"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+    et-dvb-modules-beyonwizu4 \
+    et-initrd-et13000 \
+    "
+
+MTD_ROOTFS = "mmcblk0p4"
+MTD_KERNEL = "mmcblk0p3"
+KERNEL_FILE = "kernel.bin"
+ROOTFS_FILE = "rootfs.tar.bz2"
+
+DVBPROVIDER = "kernel"
+DVBSKYPROVIDER = "kernel"
+
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
+    kernel-module-cdfs \
+    "
+
+MACHINE_EXTRA_RRECOMMENDS += "\
+    ${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \
+    gstreamer1.0-libav \
+    "
+
+include conf/machine/include/autoload-filesystems.inc
+
+DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3 --with-h265 --with-vb6 --with-vb8 --with-vb9 --with-spark"
+
+TARGET_ARCH = "arm"
+DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
+IMAGE_FSTYPES =+ "tar.bz2"
+
+PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
+PREFERRED_VERSION_linux-etxx00 = "4.9.51"
+
+MACHINE_FEATURES += "alsa 3dtv switchoff hdmicec omb videoenhancement textlcd emmc mmc linuxwifi multitranscoding fanctrl SCART HDMI RCA HDMI-IN-FHD"
+#MACHINE_FEATURES += "hbbtv-browser-webkit"
+
+IMAGE_CMD_tar_prepend = "\
+    mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
+    cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_update.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/update.bin; \
+    cp ${DEPLOY_DIR_IMAGE}/zImage ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
+    echo ${DISTRO_NAME}-${DISTRO_VERSION}.${BUILD_VERSION} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
+    echo "rename this file to 'force' to force an update without confirmation" > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/noforce; \
+    echo "this file enable kernel update" > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/partition.update; \
+    cd ${IMAGE_ROOTFS}; \
+    tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
+    mv ${DEPLOY_DIR_IMAGE}/rootfs.tar ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
+    bzip2 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.tar; \
+    cd ${DEPLOY_DIR_IMAGE}; \
+    zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
+    rm -Rf ${IMAGEDIR}; \
+"
+
+require conf/machine/include/tune-cortexa15.inc
+require conf/machine/include/soc-family.inc
