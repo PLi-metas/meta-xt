@@ -1,6 +1,8 @@
 # We know about rtc
 include conf/machine/include/build-extras.inc
 
+BOX_BRAND = "xtrend"
+
 SOC_FAMILY = "bcm7252s"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
