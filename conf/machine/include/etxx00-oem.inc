@@ -5,11 +5,6 @@ BOX_BRAND = "xtrend"
 
 SOC_FAMILY = "bcm7252s"
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    et-dvb-modules-beyonwizu4 \
-    et-initrd-et13000 \
-    "
-
 MTD_ROOTFS = "mmcblk0p4"
 MTD_KERNEL = "mmcblk0p3"
 KERNEL_FILE = "kernel.bin"
