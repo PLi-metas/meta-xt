@@ -10,4 +10,4 @@ require et-dvb-modules.inc
 SRC_URI[md5sum] = "4ce3e933a8e863d4cf08b8c3a24904c5"
 SRC_URI[sha256sum] = "28c96f80b68184af6eb673eb3150f3e72ca631b4e44844b166e2e789fda54d8f"
 
-COMPATIBLE_MACHINE = "et5x00"
+COMPATIBLE_MACHINE = "^(et5x00)$"
