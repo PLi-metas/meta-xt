@@ -5,6 +5,8 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+COMPATIBLE_MACHINE = "^(et10000)$"
+
 SRC_URI = "https://www.dropbox.com/s/raw/6po3jfdb9fqid1f/et10000-dvbc-blindscan-1.2.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"
