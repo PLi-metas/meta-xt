@@ -59,6 +59,9 @@ IMAGE_CMD_ubi_prepend = " \
         "
 
 
-MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec"
+MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec middleflash"
+
+# Broken bootloader can only flash around 100 MB
+FLASHSIZE = "96"
 
 require conf/machine/include/tune-mips32.inc
