@@ -34,9 +34,6 @@ UBI_VOLNAME = "rootfs"
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
-IMAGEVERSION := "${IMAGE_NAME}"
-IMAGEVERSION[vardepsexclude] = "DATE"
-
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
