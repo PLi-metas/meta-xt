@@ -51,3 +51,5 @@ MACHINE_FEATURES += "alsa usbhost wlan kernelwifi 3dtv switchoff osdposition hdm
 require conf/machine/include/tune-mips32.inc
 
 BOX_BRAND = "xtrend"
+
+PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"

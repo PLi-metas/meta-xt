@@ -20,10 +20,8 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
+SRC_URI += "http://source.mynonpublic.com/xtrend/xtrend-linux-${PV}.tar.gz \
 	file://defconfig \
-	file://0001-kernel-add-support-for-gcc-5.patch \
-	file://kernel-gcc6.patch \
 	file://0001-Revert-default-authentication-needs-to-be-at-least-n.patch \
 	file://0001-Revert-MIPS-mm-Add-compound-tail-page-_mapcount-when.patch \
 	file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \
@@ -60,8 +58,9 @@ SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://0001-stv090x-optimized-TS-sync-control.patch \
 	file://2-2-stv090x-on-tuning-lock-return-correct-tuned-paramaters-like-freq-sr-fec-rolloff-etc.patch \
 	file://0001-Support-TBS-USB-drivers.patch \
-	file://0002-mips-kernel-fpu.patch \
-	file://0003-mips-kernel-ilog2.patch \
+	file://genksyms_fix_typeof_handling.patch \
+	file://0002-cp1emu-do-not-use-bools-for-arithmetic.patch \
+	file://0003-log2-give-up-on-gcc-constant-optimizations.patch \
 	"
 
 inherit kernel machine_kernel_pr

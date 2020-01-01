@@ -21,7 +21,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "https://www.dropbox.com/s/raw/xzb4snv7y0widzu/xtrend-linux-4.4.8-20160504.tar.xz \
+SRC_URI += "http://source.mynonpublic.com/xtrend/xtrend-linux-${PV}-${SRCDATE}.tar.xz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://fix-proc-cputype.patch \

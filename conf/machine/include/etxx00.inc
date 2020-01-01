@@ -1,6 +1,5 @@
 require conf/machine/include/et.inc
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "et-blindscan-dvbs-utils"
 
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
