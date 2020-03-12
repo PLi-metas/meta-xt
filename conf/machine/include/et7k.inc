@@ -1,7 +1,6 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
-
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	et-dvb-modules-${MACHINE} \
 	"
@@ -25,7 +24,6 @@ DEFAULTTUNE = "mips32el"
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
-
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
@@ -63,3 +61,5 @@ MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff
 FLASHSIZE = "96"
 
 require conf/machine/include/tune-mips32.inc
+
+BOX_BRAND = "xtrend"
