@@ -50,7 +50,6 @@ IMAGE_CMD_tar_prepend = "\
     cd ${DEPLOY_DIR_IMAGE}; \
     zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
     rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.manifest; \
     rm -Rf ${IMAGEDIR}; \
 "
 
