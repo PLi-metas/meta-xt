@@ -1,4 +1,4 @@
-DESCRIPTION = "frontpanel update"
+DESCRIPTION = "Xtrend frontpanel update"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
