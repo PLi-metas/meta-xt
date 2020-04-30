@@ -29,7 +29,7 @@ do_install_append() {
 }
 
 FILES_${PN} = "${libdir}/*"
-FILES_${PN}-dev = "/usr/include/*"
+FILES_${PN}-dev = "${incdir}/*"
 
 RPROVIDES_${PN} = "libnxpl.so libnexus.so libv3ddriver.so libGLESv2.so libEGL.so"
 

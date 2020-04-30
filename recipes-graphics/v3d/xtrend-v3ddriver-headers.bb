@@ -22,4 +22,4 @@ do_install_append() {
 	done
 }
 
-FILES_${PN}-dev = "/usr/include/*"
+FILES_${PN}-dev = "${incdir}/*"
