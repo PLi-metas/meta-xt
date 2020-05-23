@@ -44,6 +44,10 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB"
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
+IMAGE_CMD_ubi_prepend = " \
+        rm -rf ${IMAGE_ROOTFS}/tmp/*; \
+        "
+
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
@@ -53,12 +57,10 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}; \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -rf ${IMAGEDIR}; \
 	"
-
-IMAGE_CMD_ubi_prepend = " \
-        rm -rf ${IMAGE_ROOTFS}/tmp/*; \
-        "
 
 MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec middleflash"
 
