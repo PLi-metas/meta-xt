@@ -13,3 +13,5 @@ MACHINE_FEATURES += "externalwifi textlcd middleflash"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
+
+PREFERRED_VERSION_linux-etxx00 = "3.8.7"

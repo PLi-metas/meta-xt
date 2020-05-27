@@ -31,7 +31,6 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 IMAGE_FSTYPES += "tar.bz2"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
-PREFERRED_VERSION_linux-etxx00 = "4.9.51"
 
 MACHINE_FEATURES += "alsa 3dtv switchoff hdmicec omb videoenhancement textlcd emmc mmc linuxwifi multitranscoding fanctrl blindscan-tbs SCART HDMI RCA HDMI-IN-FHD"
 

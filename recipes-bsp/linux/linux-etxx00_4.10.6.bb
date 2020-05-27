@@ -39,6 +39,8 @@ SRC_URI += "http://source.mynonpublic.com/xtrend/linux-${PV}-mips.tar.gz \
     file://v3-3-4-media-dvbsky-MyGica-T230C-support.patch \
     file://v3-3-5-media-dvbsky-MyGica-T230C-support.patch \
     file://add-more-devices-rtl8xxxu.patch \
+    file://0005-xbox-one-tuner-4.10.patch \
+    file://0006-dvb-media-tda18250-support-for-new-silicon-tuner.patch \
     "
 
 inherit kernel machine_kernel_pr
