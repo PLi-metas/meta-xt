@@ -43,7 +43,7 @@ SRC_URI += "http://source.mynonpublic.com/xtrend/linux-${PV}-mips.tar.gz \
     file://0006-dvb-media-tda18250-support-for-new-silicon-tuner.patch \
     "
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 S = "${WORKDIR}/linux-${PV}"
 B = "${WORKDIR}/build"

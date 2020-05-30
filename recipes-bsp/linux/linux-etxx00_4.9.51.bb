@@ -7,7 +7,7 @@ COMPATIBLE_MACHINE = "^(et13000|beyonwizu4)$"
 
 SRC = "20171113"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 KERNEL_RELEASE = "4.9.51"
 

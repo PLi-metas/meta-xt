@@ -36,7 +36,7 @@ SRC_URI += "http://source.mynonpublic.com/xtrend/xtrend-linux-${PV}-${SRCDATE}.t
 	file://0003-dont-mark-register-as-const.patch \
 	"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 S = "${WORKDIR}/linux-${PV}"
 

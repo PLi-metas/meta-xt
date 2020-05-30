@@ -7,7 +7,7 @@ COMPATIBLE_MACHINE = "^(et1x000)$"
 
 SRC = "20170227"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 KERNEL_RELEASE = "4.1.37"
 
