@@ -9,7 +9,7 @@ IMAGE_CMD_ubi_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
-MACHINE_FEATURES += "externalwifi textlcd middleflash"
+MACHINE_FEATURES += "textlcd"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
