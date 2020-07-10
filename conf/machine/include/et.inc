@@ -1,7 +1,6 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
-
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	et-dvb-modules-${MACHINE} \
 	"
@@ -30,9 +29,6 @@ KERNEL_CONSOLE = "null"
 IMAGE_FSTYPES ?= "ubi"
 
 UBI_VOLNAME = "rootfs"
-
-IMAGEDIR ?= "${MACHINE}"
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
