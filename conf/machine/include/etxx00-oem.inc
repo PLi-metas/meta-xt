@@ -28,7 +28,7 @@ IMAGE_FSTYPES += "tar.bz2"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
 
-MACHINE_FEATURES += "alsa switchoff hdmicec videoenhancement textlcd emmc mmc multitranscoding fanctrl blindscan-tbs"
+MACHINE_FEATURES += "alsa switchoff hdmicec videoenhancement emmc mmc HDMI"
 
 IMAGE_CMD_tar_prepend = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \

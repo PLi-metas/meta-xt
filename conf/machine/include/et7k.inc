@@ -7,7 +7,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
-MACHINE_EXTRA_RRECOMMENDS = " \
+MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
@@ -55,7 +55,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -rf ${IMAGEDIR}; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs HDMI"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"

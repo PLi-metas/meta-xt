@@ -10,3 +10,5 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB"
 IMAGE_CMD_ubi_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
+
+MACHINE_FEATURES += "videoenhancement blindscan-tbs SCART"
