@@ -3,10 +3,6 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
-COMPATIBLE_MACHINE = "^(et7x00)$"
-
 SRC_URI = "https://www.dropbox.com/s/raw/yltihfa2ra1n88q/et7x00-dvbc-blindscan-1.6.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"

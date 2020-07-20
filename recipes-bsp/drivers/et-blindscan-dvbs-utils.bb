@@ -5,8 +5,6 @@ LICENSE = "CLOSED"
 
 SRC_URI = "https://www.dropbox.com/s/raw/xjlrg09bvjp7q18/et-dvbs-blindscan-1.1.zip"
 
-COMPATIBLE_MACHINE = "^(et5x00|et6x00|et9x00|et4x00|et7x00)$"
-
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
@@ -26,3 +24,5 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 SRC_URI[md5sum] = "08343ba383c3b97356bd23ed82c0ce9f"
 SRC_URI[sha256sum] = "5695f5c164f729d0c420f57cbd654216776d31d2d4d2ea37e544748d2b313ac6"
+
+BLINDSCAN_BINARY = "avl_xtrend_blindscan"

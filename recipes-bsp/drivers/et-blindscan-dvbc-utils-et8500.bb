@@ -3,10 +3,6 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
-COMPATIBLE_MACHINE = "^(et8500)$"
-
 SRC_URI = "https://www.dropbox.com/s/raw/8f3wh8ksu8griph/et8500-dvbc-blindscan-1.6.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"
