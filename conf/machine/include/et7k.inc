@@ -63,3 +63,5 @@ FLASHSIZE = "96"
 require conf/machine/include/tune-mips32.inc
 
 BOX_BRAND = "xtrend"
+
+STB_PLATFORM = "7genxt"

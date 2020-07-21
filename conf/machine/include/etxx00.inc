@@ -15,3 +15,5 @@ FLASHSIZE = "96"
 PREFERRED_VERSION_linux-etxx00 = "3.8.7"
 
 MACHINE_FEATURES += "blindscan-tbs blindscan-dvbs YUV"
+
+STB_PLATFORM = "1genxt"

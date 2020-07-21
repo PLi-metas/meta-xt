@@ -12,3 +12,5 @@ IMAGE_CMD_ubi_prepend = " \
 	"
 
 MACHINE_FEATURES += "videoenhancement blindscan-tbs SCART"
+
+STB_PLATFORM = "2genxt"
