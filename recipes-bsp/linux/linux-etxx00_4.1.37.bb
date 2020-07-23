@@ -83,7 +83,7 @@ kernel_do_compile() {
         fi
 }
 
-pkg_postinst_kernel-image () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image () {
         if [ -d /proc/stb ] ; then
                 dd if=/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} of=/dev/mmcblk0p3
         fi
@@ -91,7 +91,7 @@ pkg_postinst_kernel-image () {
         true
 }
 
-pkg_postrm_kernel-image () {
+pkg_postrm_${KERNEL_PACKAGE_NAME}-image () {
 }
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/linux-etxx00-${KV}:"

@@ -10,6 +10,8 @@ MTD_KERNEL = "mmcblk0p3"
 KERNEL_FILE = "kernel.bin"
 ROOTFS_FILE = "rootfs.tar.bz2"
 
+MTD_BLACK  = "mmcblk0"
+
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
 
@@ -28,7 +30,7 @@ IMAGE_FSTYPES += "tar.bz2"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
 
-MACHINE_FEATURES += "alsa switchoff hdmicec videoenhancement emmc mmc HDMI"
+MACHINE_FEATURES += "alsa switchoff hdmicec videoenhancement emmc mmc blindscan-tbs HDMI"
 
 IMAGE_CMD_tar_prepend = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
