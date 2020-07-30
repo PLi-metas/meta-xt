@@ -1,7 +1,7 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	et-dvb-modules-${MACHINE} \
 	"
 
@@ -19,7 +19,7 @@ ROOTFS_FILE = "rootfs.bin"
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
 TARGET_ARCH = "mipsel"
-DEFAULTTUNE ?= "mips32el"
+DEFAULTTUNE = "mips32el"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
