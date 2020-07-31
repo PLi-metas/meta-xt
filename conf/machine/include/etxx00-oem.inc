@@ -3,8 +3,6 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 BOX_BRAND = "xtrend"
 
-SOC_FAMILY = "bcm7252s"
-
 MTD_ROOTFS = "mmcblk0p4"
 MTD_KERNEL = "mmcblk0p3"
 KERNEL_FILE = "kernel.bin"
