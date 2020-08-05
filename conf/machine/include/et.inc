@@ -27,7 +27,6 @@ KERNEL_CONSOLE = "null"
 
 IMAGE_FSTYPES ?= "ubi"
 
-UBI_VOLNAME = "rootfs"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \

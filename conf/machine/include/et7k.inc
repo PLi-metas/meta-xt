@@ -32,7 +32,6 @@ KERNEL_OUTPUT_DIR = "."
 
 IMAGE_FSTYPES ?= "ubi"
 
-UBI_VOLNAME = "rootfs"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 8192"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
