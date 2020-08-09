@@ -1,10 +1,11 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "4.4.8"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	et-dvb-modules-${MACHINE} \
 	"
-
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
@@ -21,7 +22,7 @@ TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
-PREFERRED_VERSION_linux-etxx00 = "4.4.8"
+PREFERRED_VERSION_linux-etxx00 = "${KERNELVERSION}"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
 

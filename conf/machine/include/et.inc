@@ -5,7 +5,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	et-dvb-modules-${MACHINE} \
 	"
 
-
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
@@ -26,7 +25,6 @@ KERNEL_OUTPUT_DIR = "."
 KERNEL_CONSOLE = "null"
 
 IMAGE_FSTYPES ?= "ubi"
-
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \

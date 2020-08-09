@@ -1,21 +1,25 @@
-DESCRIPTION = "Hardware drivers for ${MACHINE}"
+SUMMARY = "Hardware drivers for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
+require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-KV = "${KERNELVERSION}"
+COMPATIBLE_MACHINE = "^(et13000|beyonwizu4)$"
 
 PV = "${KV}+${SRCDATE}"
+
+KV = "${KERNELVERSION}"
 
 S = "${WORKDIR}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf ${base_libdir}/modules/${KV}/extra"
-
 do_compile() {
+}
+
+do_populate_sysroot() {
 }
 
 do_install() {
@@ -26,3 +30,5 @@ do_install() {
 		echo $i >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	done
 }
+
+FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf ${base_libdir}/modules/${KV}/extra"
