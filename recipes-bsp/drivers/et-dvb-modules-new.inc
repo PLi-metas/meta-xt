@@ -10,7 +10,6 @@ COMPATIBLE_MACHINE = "^(et13000|beyonwizu4)$"
 
 PV = "${KV}+${SRCDATE}"
 
-KV = "${KERNELVERSION}"
 
 S = "${WORKDIR}"
 
