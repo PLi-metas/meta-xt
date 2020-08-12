@@ -48,3 +48,5 @@ IMAGE_CMD_tar_prepend = "\
 
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/soc-family.inc
+
+BLINDSCAN_BINARY = "avl_xtrend_blindscan"

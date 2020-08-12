@@ -47,3 +47,5 @@ require conf/machine/include/tune-mips32.inc
 BOX_BRAND = "xtrend"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
+
+BLINDSCAN_BINARY = "avl_xtrend_blindscan"
