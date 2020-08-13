@@ -23,10 +23,10 @@ do_populate_sysroot() {
 
 do_install() {
 	install -d ${D}${base_libdir}/modules/${KV}/extra
-	install -d ${D}/${sysconfdir}/modules-load.d
+	install -d ${D}${sysconfdir}/modules-load.d
 	for i in tpm modloader modloader2 dvb; do
 		install -m 0755 ${WORKDIR}/$i.ko ${D}${base_libdir}/modules/${KV}/extra
-		echo $i >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
+		echo $i >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 	done
 }
 

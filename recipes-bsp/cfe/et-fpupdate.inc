@@ -17,9 +17,9 @@ FILES_${PN} = "${bindir} /lib/firmware ${sysconfdir}/init.d"
 
 do_install() {
 	install -d ${D}${bindir}
-	install -d ${D}/lib/firmware
-	install -m 0755 ${S}/fpupdate ${D}/${bindir}
-	install -m 0644 ${S}/avrmain-* ${D}/lib/firmware/
+	install -d ${D}${base_libdir}/firmware
+	install -m 0755 ${S}/fpupdate ${D}${bindir}
+	install -m 0644 ${S}/avrmain-* ${D}${base_libdir}/firmware/
 
 	echo "#!/bin/sh" > ${S}/fpupdate.sh
 	echo "boxtype=\`cat /proc/stb/info/boxtype\`" >> ${S}/fpupdate.sh

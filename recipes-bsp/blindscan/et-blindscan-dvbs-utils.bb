@@ -16,8 +16,8 @@ do_compile() {
 }
 
 do_install() {
-    install -d "${D}/${bindir}"
-    install -m 0755 "${S}/avl_xtrend_blindscan" "${D}/${bindir}"
+    install -d "${D}${bindir}"
+    install -m 0755 "${S}/${BLINDSCAN_BINARY}" "${D}${bindir}"
 }
 
 INHIBIT_PACKAGE_STRIP = "1"
