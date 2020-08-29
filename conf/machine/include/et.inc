@@ -3,9 +3,6 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	et-dvb-modules-${MACHINE} \
-	"
-
-MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
