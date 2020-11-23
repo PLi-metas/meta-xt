@@ -6,7 +6,6 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "^(et13000|beyonwizu4)$"
 
 PV = "${KV}+${SRCDATE}"
 
