@@ -9,10 +9,6 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 8192"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
-IMAGE_CMD_ubi_prepend = " \
-	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
-	"
-
 MACHINE_FEATURES += "videoenhancement blindscan-tbs SCART"
 
 STB_PLATFORM = "2genxt"

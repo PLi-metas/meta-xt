@@ -37,6 +37,10 @@ IMAGE_CMD_ubi_append = " \
 	rm -rf ${IMAGEDIR}; \
 	"
 
+IMAGE_CMD_ubi_prepend = " \
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	"
+
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec HDMI"
 
 require conf/machine/include/tune-mips32.inc
