@@ -1,4 +1,4 @@
-require et-dvb-modules-new.inc
+require et-dvb-modules.inc
 
 SRCDATE = "20190927"
 
