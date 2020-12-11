@@ -3,12 +3,12 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-SRC_URI = "https://www.dropbox.com/s/raw/xjlrg09bvjp7q18/et-dvbs-blindscan-1.1.zip"
+PV = "1.1"
+
+SRC_URI = "https://github.com/neo-pli-bsps/meta-xtrend/releases/download/Binaries-1.0/et-dvbs-blindscan-${PV}.zip"
 
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
-
-PV = "1.1"
 
 S = "${WORKDIR}"
 

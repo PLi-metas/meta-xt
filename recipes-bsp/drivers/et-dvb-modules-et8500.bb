@@ -1,7 +1,7 @@
 SRCDATE = "20170424"
 GCC = "6.3.0"
 
-SRC_URI = "https://www.dropbox.com/s/raw/mf7q56lof5nd35i/et8500-drivers-4.4.8-6.3.0-20170424.zip"
+SRC_URI = "https://github.com/neo-pli-bsps/meta-xtrend/releases/download/Binaries-1.0/${MACHINE}-drivers-${KV}-${GCC}-${SRCDATE}.zip"
 
 require et-dvb-modules.inc
 
