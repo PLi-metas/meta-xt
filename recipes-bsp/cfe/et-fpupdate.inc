@@ -35,7 +35,7 @@ do_install() {
 	echo "if ! [ -x ${bindir}/fpupdate ]; then" >> ${S}/fpupdate.sh
 	echo "	exit 0" >> ${S}/fpupdate.sh
 	echo "fi" >> ${S}/fpupdate.sh
-	echo "${bindir}/fpupdate ${nonarch_base_libdir}/firmware/avrmain-\$boxtype.hex ${FPVERSION} && rm ${nonarch_base_libdir}/firmware/avrmain*.hex" >> ${S}/fpupdate.sh
+	echo "${bindir}/fpupdate ${nonarch_base_libdir}/firmware/avrmain-\$boxtype.hex ${FPVERSION} && rm -f ${nonarch_base_libdir}/firmware/avrmain*.hex" >> ${S}/fpupdate.sh
 
 	install -d ${D}${sysconfdir}/init.d
 	install -m 0755 ${S}/fpupdate.sh ${D}${sysconfdir}/init.d/fpupdate
