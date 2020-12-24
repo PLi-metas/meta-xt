@@ -3,6 +3,8 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
+COMPATIBLE_MACHINE = "^(et5x00|et6x00|et9x00|et4x00|et7x00|et8000|et10000)$"
+
 PV = "1.1"
 
 SRC_URI = "https://github.com/neo-pli-bsps/meta-xtrend/releases/download/Binaries-1.0/et-dvbs-blindscan-${PV}.zip"
