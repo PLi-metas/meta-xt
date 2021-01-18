@@ -5,7 +5,6 @@ KERNELVERSION = "4.4.8"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	et-dvb-modules-${MACHINE} \
-	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 MTD_KERNEL = "mtd1"
