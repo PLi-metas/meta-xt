@@ -25,7 +25,7 @@ do_install() {
 do_package_qa() {
 }
 
-FILES_${PN}="/"
+FILES_${PN} = "/"
 
 inherit update-rc.d
 
