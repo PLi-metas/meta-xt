@@ -24,6 +24,9 @@ IMAGE_FSTYPES += "tar.bz2"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
 
+PREFERRED_PROVIDER_virtual/egl = "et-v3ddriver-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 = "et-v3ddriver-${MACHINE}"
+
 MACHINE_FEATURES += "alsa switchoff hdmicec videoenhancement emmc mmc blindscan-tbs HDMI"
 
 IMAGE_CMD_tar_prepend = "\
