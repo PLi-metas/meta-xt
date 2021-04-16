@@ -10,7 +10,6 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 
 MTD_BLACK  = "mmcblk0"
 
-DVBSKYPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	"
